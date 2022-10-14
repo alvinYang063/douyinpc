@@ -1,0 +1,374 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html {
+  min-width: 1200px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  display: flex;
+}
+.container .aside {
+  flex: 0 0 172px;
+  background: #060716;
+}
+.container .aside .logo {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .aside .logo a {
+  width: 91px;
+  height: 34px;
+  background: url(../asset/logo.svg);
+}
+.container .aside .logo a h1 {
+  display: none;
+}
+.container .aside .aside-main {
+  height: calc(100vh - 60px);
+  overflow: hidden scroll;
+}
+.container .aside .aside-main::-webkit-scrollbar {
+  width: 0;
+}
+.container .aside .aside-main .aside-menu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+}
+.container .aside .aside-main .aside-menu .item {
+  height: 36px;
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+.container .aside .aside-main .aside-menu .item i {
+  font-size: 24px;
+  margin-right: 6px;
+}
+.container .aside .aside-main .aside-menu .item span {
+  font-size: 16px;
+}
+.container .aside .aside-main .aside-menu .item.active,
+.container .aside .aside-main .aside-menu .item:hover {
+  color: #fff;
+  font-weight: bold;
+}
+.container .aside .aside-main .aside-menu .aside-split {
+  height: 1px;
+  width: 70px;
+  background: #31323a;
+  margin-top: 20px;
+}
+.container .aside .aside-main .aside-footer .section {
+  display: flex;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  margin: 0 18px;
+  border-bottom: 1px solid #31323a;
+  padding-bottom: 12px;
+}
+.container .aside .aside-main .aside-footer .section a {
+  margin-top: 6px;
+}
+.container .aside .aside-main .aside-footer .section a img {
+  width: 12px;
+  height: 12px;
+  opacity: 0.4;
+}
+.container .aside .aside-main .aside-footer .section p {
+  margin-top: 6px;
+}
+.container .aside .aside-main .aside-footer .section:nth-child(2) {
+  padding-top: 12px;
+}
+.container .aside .aside-main .aside-footer .alist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 18px 30px;
+}
+.container .aside .aside-main .aside-footer .alist a {
+  font-size: 12px;
+  margin-right: 12px;
+  margin-top: 8px;
+}
+.container .aside .aside-main .aside-footer .alist a:nth-child(even) {
+  margin-right: 0;
+}
+.container .main {
+  flex: 1 1 auto;
+  background: #161722;
+}
+.container .main .header {
+  height: 60px;
+  padding: 0 30px;
+  border-bottom: 1px solid #31323a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .header .header-search {
+  width: 476px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #292b35;
+  border-radius: 5px;
+}
+.container .main .header .header-search i {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 0 10px;
+}
+.container .main .header .header-search input {
+  flex: 1 0 auto;
+  font-size: 14px;
+  background: #292b35;
+  color: #fff;
+  outline: none;
+  border: none;
+  caret-color: #fe2c55;
+}
+.container .main .header .header-search button {
+  width: 64px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.9);
+  background: inherit;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.container .main .header .header-search button:hover {
+  color: #fe2c55;
+}
+.container .main .header .header-func {
+  display: flex;
+  height: 60px;
+  align-items: center;
+}
+.container .main .header .header-func .funcitem {
+  position: relative;
+  display: flex;
+  margin: 0 10px;
+  font-size: 14px;
+}
+.container .main .header .header-func .funcitem .first {
+  line-height: 60px;
+}
+.container .main .header .header-func .funcitem .item-sub {
+  position: absolute;
+  top: 61px;
+  left: 50%;
+  z-index: 99;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background: #252632;
+  padding-bottom: 12px;
+  display: none;
+}
+.container .main .header .header-func .funcitem .item-sub a {
+  font-size: 14px;
+  height: 20px;
+  width: 85px;
+  text-align: start;
+  padding: 12px;
+}
+.container .main .header .header-func .funcitem:hover a:hover {
+  font-weight: bold;
+  color: #fff;
+}
+.container .main .header .header-func .funcitem:hover .item-sub {
+  display: flex;
+}
+.container .main .header .header-func .funcitem.publish {
+  width: 120px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .main .header .header-func .funcitem.publish a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 108px;
+  height: 38px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: -3px 0 0 #00faf0, 3px 0 0 #fe2c55;
+}
+.container .main .header .header-func .funcitem.publish a:hover {
+  animation: changeborder 0.5s;
+  box-shadow: none;
+}
+.container .main .header .header-func .funcitem.btn button {
+  background: #fe2c55;
+  height: 40px;
+  width: 110px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  border-radius: 5px;
+  color: #fff;
+}
+.container .main .header .header-func .funcitem.btn button:hover {
+  background: #f22a51;
+}
+.container .main .content {
+  /* 设置整个滚动条的样式 */
+  height: calc(100vh - 60px);
+  padding: 20px 20px;
+  overflow: hidden scroll;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.container .main .content::-webkit-scrollbar {
+  width: 6px;
+}
+.container .main .content::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background: #363741;
+}
+.container .main .content .item {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  width: calc(25% - 16px);
+  margin: 0 8px;
+  margin-bottom: 30px;
+}
+.container .main .content .item.playing .cover img {
+  display: none;
+}
+.container .main .content .item.playing .cover .footer {
+  display: none;
+}
+.container .main .content .item .cover {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 75%;
+  border-radius: 5px;
+}
+.container .main .content .item .cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  z-index: 1;
+}
+.container .main .content .item .cover video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.container .main .content .item .cover .progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border-bottom-left-radius: 5px;
+  border-end-end-radius: 5px;
+  overflow: hidden;
+}
+.container .main .content .item .cover .progress span {
+  display: block;
+  background: #f22a51;
+  width: 0%;
+  height: 100%;
+}
+.container .main .content .item .cover .footer {
+  position: absolute;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+  color: #fff;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+.container .main .content .item .cover .footer .play {
+  flex-grow: 1;
+  margin-left: 5px;
+}
+.container .main .content .item .cover .footer .timelong {
+  margin-right: 15px;
+}
+.container .main .content .item .title {
+  margin-top: 10px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 10px;
+  line-height: 24px;
+  height: 48px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.container .main .content .item .author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .main .content .item .author a {
+  display: flex;
+  align-items: center;
+}
+.container .main .content .item .author a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+.container .main .content .item .author a span {
+  margin-left: 15px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.container .main .content .item .author .pubdate {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+@keyframes changeborder {
+  0% {
+    width: 108px;
+  }
+  50% {
+    width: 120px;
+  }
+  100% {
+    width: 108px;
+  }
+}
